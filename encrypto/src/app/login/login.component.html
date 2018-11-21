@@ -1,0 +1,13 @@
+
+  <form class="example-form" [formGroup]="loginForm" (submit)="loginForm.valid? loginUser():false">
+    <mat-form-field>
+      <input matInput placeholder="Input" formControlName="username">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Password" formControlName="password">
+    </mat-form-field>
+    <button type="submit" mat-button>Login</button>
+  </form>
+
+
