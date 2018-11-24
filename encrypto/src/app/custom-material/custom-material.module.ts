@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatCardModule} from '@angular/material/card';
-import {MatButtonModule, MatInputModule} from "@angular/material";
+import {MatButtonModule, MatDivider, MatDividerModule, MatInputModule, MatProgressSpinner, MatSpinner} from '@angular/material';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
@@ -10,13 +10,17 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     BrowserAnimationsModule,
     MatCardModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDividerModule,
+    MatInputModule,
   ],
   declarations: [],
   exports: [
     MatCardModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDividerModule,
+    MatInputModule,
   ]
 })
 export class CustomMaterialModule { }

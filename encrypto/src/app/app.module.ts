@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import {LoginModule} from "./login/login.module";
 import {CustomMaterialModule} from "./custom-material/custom-material.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     BrowserAnimationsModule,
     BrowserModule,
     LoginModule,
-    CustomMaterialModule
+    CustomMaterialModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
