@@ -1,0 +1,6 @@
+com/amazonaws/lambda/service/LoginService.class
+com/amazonaws/lambda/demo/LoginResponse.class
+LoginDAO.class
+com/amazonaws/lambda/dao/LoginDAO.class
+com/amazonaws/lambda/demo/LoginRequest.class
+com/amazonaws/lambda/demo/LoginLambdaHandler.class
