@@ -12,6 +12,5 @@ export class LoginService {
     const url = 'https://9li1fxbjw2.execute-api.us-east-2.amazonaws.com/dev/login';
     console.log(JSON.stringify(msg));
     return this.http.post(url, JSON.stringify(msg)).toPromise();
-
   }
 }
