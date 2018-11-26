@@ -1,0 +1,6 @@
+com/alacriti/bloodbankmanager/lambda/handler/LoginHandler.class
+com/alacriti/bloodbankmanager/request/LoginRequest.class
+com/alacriti/bloodbankmanager/request/LoginResponse.class
+com/alacriti/bloodbankmanager/service/LoginService.class
+com/alacriti/bloodbankmanager/dao/LoginDAO.class
+com/alacriti/bloodbankmanager/request/LoginLambdaHandler.class
