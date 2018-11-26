@@ -22,15 +22,14 @@
         </tr>
       </table>
     </form>
-
     <!--<mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>-->
-
   </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="loginUser()" color="primary">Login</button>
+  </mat-card-actions>
 
   <mat-card-actions>
-
-    <button mat-raised-button (click)="loginUser()" color="primary">Login</button>
-
+    <a  (click)="signUpUser()" color="primary">New User? <br> Sign Up Now</a>
   </mat-card-actions>
 
 </mat-card>

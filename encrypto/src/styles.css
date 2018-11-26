@@ -16,3 +16,10 @@
   margin: 0 auto;
   margin-top: 100px;
 }
+
+.dashboard {
+  width: 100;
+  background: #fff;
+  margin: 0 auto;
+  height: 500px;
+}

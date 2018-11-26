@@ -3,6 +3,7 @@ import {RouterModule} from '@angular/router';
 import {LoginComponent} from './login/login.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {AuthGaurdService} from './common/AuthGaurdService/auth-gaurd.service';
+import {RegisterUserComponent} from './register-user/register-user.component';
 
 const routes = [
   {
@@ -18,6 +19,10 @@ const routes = [
     path: 'dashboard',
     component: DashboardComponent,
     canActivate: [AuthGaurdService]
+  },
+  {
+    path: 'register-user',
+    component: RegisterUserComponent
   },
   {
     path: '**',

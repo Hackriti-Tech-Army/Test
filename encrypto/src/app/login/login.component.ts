@@ -31,9 +31,9 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser() {
-    console.log('Login button clicked');
-    console.log('Username : ' + this.username.value);
-    console.log('Password : ' + this.password.value);
+    this.log.debug('Login button clicked');
+    this.log.debug('Username : ' + this.username.value);
+    this.log.debug('Password : ' + this.password.value);
     const msg = new LoginModel();
     msg.userName = this.username.value;
     msg.password = this.password.value;
@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
         this.log.debug(resp);
         const data = <BaseModel>resp;
         this.log.debug(data.responseMessage);
-        this.rootService.loginSuccessfull = false;
+        this.rootService.loginSuccessfull = true;
         this.log.debug('Redirecting to Dashboard');
         this.router.navigate(['/dashboard']);
       })
@@ -51,5 +51,10 @@ export class LoginComponent implements OnInit {
         this.log.debug('Error Response from Login Request');
         this.log.debug(err);
       });
+  }
+
+  signUpUser() {
+    this.log.debug('SignUp User action clicked');
+    this.router.navigate(['/register-user']);
   }
 }
