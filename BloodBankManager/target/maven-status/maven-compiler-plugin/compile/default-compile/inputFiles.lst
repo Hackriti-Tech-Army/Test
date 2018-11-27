@@ -1,6 +1,0 @@
-/home/digvijaykumars/AWS_WORKSPACE/BloodBankManager/src/main/java/com/alacriti/bloodbankmanager/service/LoginService.java
-/home/digvijaykumars/AWS_WORKSPACE/BloodBankManager/src/main/java/com/alacriti/bloodbankmanager/dao/LoginDAO.java
-/home/digvijaykumars/AWS_WORKSPACE/BloodBankManager/src/main/java/com/alacriti/bloodbankmanager/request/LoginResponse.java
-/home/digvijaykumars/AWS_WORKSPACE/BloodBankManager/src/main/java/com/alacriti/bloodbankmanager/lambda/handler/LoginHandler.java
-/home/digvijaykumars/AWS_WORKSPACE/BloodBankManager/src/main/java/com/alacriti/bloodbankmanager/request/LoginLambdaHandler.java
-/home/digvijaykumars/AWS_WORKSPACE/BloodBankManager/src/main/java/com/alacriti/bloodbankmanager/request/LoginRequest.java

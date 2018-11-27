@@ -4,8 +4,9 @@ import java.util.UUID;
 
 import org.apache.log4j.Logger;
 
+import com.alacriti.bloodbankmanager.impl.service.LoginServiceImpl;
 import com.alacriti.bloodbankmanager.request.LoginRequest;
-import com.alacriti.bloodbankmanager.request.LoginResponse;
+import com.alacriti.bloodbankmanager.response.LoginResponse;
 import com.alacriti.bloodbankmanager.service.LoginService;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.LambdaLogger;
@@ -19,10 +20,10 @@ public class LoginHandler implements RequestHandler<LoginRequest, LoginResponse>
 		  LambdaLogger logger= context.getLogger();
 	        logger.log("Input: " + loginRequest);
 	        LoginResponse loginResponse = new LoginResponse();
-	        LoginService loginService=new LoginService();
+	        LoginService service=new LoginServiceImpl();
 	        
 	        try {
-	        	Boolean isValid=loginService.validateUser(loginRequest);
+	        	Boolean isValid=service.validateUser(loginRequest);
 	        	if(isValid)
 	            loginResponse.setResponseMessage("Login Successfull with user " + loginRequest.getUsername());
 	        	else
