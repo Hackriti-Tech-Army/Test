@@ -1,6 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-
 import {AppComponent} from './app.component';
 import {LoginModule} from './login/login.module';
 import {CustomMaterialModule} from './custom-material/custom-material.module';
@@ -9,11 +8,13 @@ import {AppRoutingModule} from './app-routing.module';
 import {LoggerService} from './common/LoggerService/logger.service';
 import {HttpClientModule} from '@angular/common/http';
 import {DashboardModule} from './dashboard/dashboard.module';
-import { TitleBarComponent } from './title-bar/title-bar.component';
-import { SideBarComponent } from './side-bar/side-bar.component';
 import {TitleBarModule} from './title-bar/title-bar.module';
 import {SideBarModule} from './side-bar/side-bar.module';
 import {RegisterUserModule} from './register-user/register-user.module';
+import {TimelineModule} from './timeline/timeline.module';
+import {MyAccountModule} from './my-account/my-account.module';
+import {RequestHistoryModule} from './request-history/request-history.module';
+import {CreateRequestModule} from './create-request/create-request.module';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,11 @@ import {RegisterUserModule} from './register-user/register-user.module';
     DashboardModule,
     TitleBarModule,
     SideBarModule,
-    RegisterUserModule
+    RegisterUserModule,
+    TimelineModule,
+    MyAccountModule,
+    RequestHistoryModule,
+    CreateRequestModule,
   ],
   providers: [
     LoggerService

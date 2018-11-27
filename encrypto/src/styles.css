@@ -17,9 +17,19 @@
   margin-top: 100px;
 }
 
-.dashboard {
-  width: 100;
+.sidebar {
+  width: 25%;
+  float: left;
   background: #fff;
   margin: 0 auto;
   height: 500px;
+}
+
+.timeline-style {
+  width: 50%;
+  float: left;
+}
+
+.dashboard {
+  width: 100%;
 }

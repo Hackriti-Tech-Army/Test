@@ -1,16 +1,21 @@
-<mat-drawer-container class="dashboard" [hasBackdrop]="false">
-  <mat-drawer #drawer >
+
+  <mat-drawer #drawer opened="">
     <mat-list>
-      <mat-list-item>
-        <mat-icon matListIcon>folder</mat-icon>
-        <h3 matLine> ABC </h3>
+      <mat-list-item (click)="toggleTimeline(1)">
+        <mat-icon matListIcon>opacity</mat-icon>
+        <h3 matLine>Create Request</h3>
       </mat-list-item>
-      <mat-list-item>
-        <mat-icon matListIcon>folder</mat-icon>
-        <h3 matLine> XYZ </h3>
+      <mat-list-item (click)="toggleTimeline(2)">
+        <mat-icon matListIcon>search</mat-icon>
+        <h3 matLine>Check Old Requests</h3>
+        <p matLine>
+      </mat-list-item>
+      <mat-list-item (click)="toggleTimeline(3)">
+        <mat-icon matListIcon>face</mat-icon>
+        <h3 matLine>My Account</h3>
         <p matLine>
       </mat-list-item>
     </mat-list>
   </mat-drawer>
   <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
-</mat-drawer-container>
+

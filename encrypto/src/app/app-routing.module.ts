@@ -4,6 +4,9 @@ import {LoginComponent} from './login/login.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {AuthGaurdService} from './common/AuthGaurdService/auth-gaurd.service';
 import {RegisterUserComponent} from './register-user/register-user.component';
+import {CreateRequestComponent} from './create-request/create-request.component';
+import {RequestHistoryComponent} from './request-history/request-history.component';
+import {MyAccountComponent} from './my-account/my-account.component';
 
 const routes = [
   {
@@ -23,6 +26,18 @@ const routes = [
   {
     path: 'register-user',
     component: RegisterUserComponent
+  },
+  {
+    path: 'create-request',
+    component: CreateRequestComponent
+  },
+  {
+    path: 'request-history',
+    component: RequestHistoryComponent
+  },
+  {
+    path: 'my-account',
+    component: MyAccountComponent
   },
   {
     path: '**',

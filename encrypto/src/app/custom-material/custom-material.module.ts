@@ -5,7 +5,7 @@ import {
   MatButtonModule,
   MatDivider,
   MatDividerModule, MatDrawerContainer, MatIconModule,
-  MatInputModule, MatListModule,
+  MatInputModule, MatListModule, MatProgressBarModule,
   MatProgressSpinner, MatSelectModule,
   MatSidenavModule,
   MatSpinner
@@ -24,7 +24,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatSidenavModule,
     MatSelectModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatProgressBarModule
   ],
   declarations: [],
   exports: [
@@ -36,7 +37,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatSidenavModule,
     MatSelectModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatProgressBarModule
   ]
 })
 export class CustomMaterialModule {
