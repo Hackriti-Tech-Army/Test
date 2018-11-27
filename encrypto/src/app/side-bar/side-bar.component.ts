@@ -20,13 +20,13 @@ export class SideBarComponent implements OnInit {
     this.log.debug('ID Pressed :' + id);
     switch (id) {
       case 1:
-        this.router.navigate(['create-request']);
+        this.router.navigate(['/dashboard/create-request']);
         break;
       case 2:
-        this.router.navigate(['request-history']);
+        this.router.navigate(['/dashboard/request-history']);
         break;
       case 3:
-        this.router.navigate(['my-account']);
+        this.router.navigate(['/dashboard/my-account']);
         break;
       default:
         return;

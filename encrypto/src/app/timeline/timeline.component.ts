@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {LoggerService} from '../common/LoggerService/logger.service';
 
 @Component({
   selector: 'app-timeline',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TimelineComponent implements OnInit {
 
-  constructor() { }
+  constructor(private log: LoggerService) {
+  }
 
   ngOnInit() {
+    this.log.debug('Timeline loaded!!!');
   }
 
 }

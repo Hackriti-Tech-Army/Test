@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LoggerService} from '../common/LoggerService/logger.service';
 
 @Component({
   selector: 'app-register-user',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterUserComponent implements OnInit {
 
-  constructor() { }
+  constructor(private log: LoggerService) { }
 
   ngOnInit() {
+    this.log.debug('RegisterUserComponent loaded!!!');
   }
 
 }

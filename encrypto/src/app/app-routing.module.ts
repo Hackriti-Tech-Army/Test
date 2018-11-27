@@ -7,6 +7,7 @@ import {RegisterUserComponent} from './register-user/register-user.component';
 import {CreateRequestComponent} from './create-request/create-request.component';
 import {RequestHistoryComponent} from './request-history/request-history.component';
 import {MyAccountComponent} from './my-account/my-account.component';
+import {TimelineComponent} from './timeline/timeline.component';
 
 const routes = [
   {
@@ -21,23 +22,34 @@ const routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'timeline',
+        pathMatch: 'full'
+      },
+      {
+        path: 'timeline',
+        component: TimelineComponent
+      },
+      {
+        path: 'register-user',
+        component: RegisterUserComponent
+      },
+      {
+        path: 'create-request',
+        component: CreateRequestComponent
+      },
+      {
+        path: 'request-history',
+        component: RequestHistoryComponent
+      },
+      {
+        path: 'my-account',
+        component: MyAccountComponent
+      },
+    ],
     canActivate: [AuthGaurdService]
-  },
-  {
-    path: 'register-user',
-    component: RegisterUserComponent
-  },
-  {
-    path: 'create-request',
-    component: CreateRequestComponent
-  },
-  {
-    path: 'request-history',
-    component: RequestHistoryComponent
-  },
-  {
-    path: 'my-account',
-    component: MyAccountComponent
   },
   {
     path: '**',

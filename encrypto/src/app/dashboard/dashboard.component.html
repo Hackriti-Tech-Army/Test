@@ -1,11 +1,10 @@
 <div class="dashboard">
-  <mat-drawer-container class="sidebar" [hasBackdrop]="false" disableClose>
+  <mat-drawer-container class="sidebar-style" [hasBackdrop]="false" disableClose>
     <div>
   <app-side-bar></app-side-bar>
     </div>
-  <div class="timeline-style">
+  <div class="router-outlet-style">
     <router-outlet></router-outlet>
-    <app-timeline></app-timeline>
   </div>
   </mat-drawer-container>
 </div>
