@@ -1,21 +1,22 @@
 package com.alacriti.bloodbankmanager.impl.dao;
-
+/**
+ * 
+ * @author digvijaykumars
+ *
+ */
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
 import org.apache.log4j.Logger;
-
 import com.alacriti.bloodbankmanager.dao.LoginDAO;
-import com.alacriti.bloodbankmanager.lambda.handler.LoginHandler;
 import com.alacriti.bloodbankmanager.request.LoginRequest;
+import com.alacriti.bloodmanager.dao.exception.BloodManagerDAOException;
 
 public class LoginDAOImpl extends BaseDAO implements LoginDAO{
 	
 	final static Logger log = Logger.getLogger(LoginDAOImpl.class);
 	@Override
-	public Boolean validateUser(LoginRequest loginRequest) {
+	public Boolean validateUser(LoginRequest loginRequest) throws BloodManagerDAOException {
 		System.out.println("LoginDAO.validateUser()");
 		Connection con = null;
 		PreparedStatement ps;
@@ -40,7 +41,8 @@ public class LoginDAOImpl extends BaseDAO implements LoginDAO{
 				}
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			log.error("Some Exception in validateUser");
+			throw new BloodManagerDAOException("Some Exception in validateUser");
 		}
 
 		return result;

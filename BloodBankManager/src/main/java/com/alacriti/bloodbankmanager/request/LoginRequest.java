@@ -1,5 +1,9 @@
 package com.alacriti.bloodbankmanager.request;
-
+/**
+ * 
+ * @author digvijaykumars
+ *
+ */
 public class LoginRequest {
 	  String username;
 	  String password;

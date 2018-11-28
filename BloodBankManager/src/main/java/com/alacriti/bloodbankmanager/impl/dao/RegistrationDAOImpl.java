@@ -1,5 +1,9 @@
 package com.alacriti.bloodbankmanager.impl.dao;
-
+/**
+ * 
+ * @author digvijaykumars
+ *
+ */
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -9,13 +13,14 @@ import org.apache.log4j.Logger;
 
 import com.alacriti.bloodbankmanager.dao.RegistrationDAO;
 import com.alacriti.bloodbankmanager.request.RegistrationRequest;
+import com.alacriti.bloodmanager.dao.exception.BloodManagerDAOException;
 
 public class RegistrationDAOImpl extends BaseDAO implements RegistrationDAO {
 
 	final static Logger log = Logger.getLogger(RegistrationDAOImpl.class);
 
 	@Override
-	public boolean register(RegistrationRequest request) {
+	public boolean register(RegistrationRequest request) throws BloodManagerDAOException {
 		int count = 0;
 		boolean result = false;
 
@@ -46,6 +51,7 @@ public class RegistrationDAOImpl extends BaseDAO implements RegistrationDAO {
 		}
 		} catch (SQLException e) {
 			log.error("Some exception occured during register the user " + e.getMessage());
+			throw new BloodManagerDAOException("Some exception occured during register the user");
 		}
 		finally{
 			close(rs);

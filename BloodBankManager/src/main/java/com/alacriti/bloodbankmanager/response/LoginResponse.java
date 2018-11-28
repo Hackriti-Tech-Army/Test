@@ -1,5 +1,9 @@
 package com.alacriti.bloodbankmanager.response;
-
+/**
+ * 
+ * @author digvijaykumars
+ *
+ */
 public class LoginResponse {
 	String responseMessage;
     String transactionID;

@@ -1,5 +1,9 @@
 package com.alacriti.bloodbankmanager.lambda.handler;
-
+/**
+ * 
+ * @author digvijaykumars
+ *
+ */
 import com.alacriti.bloodbankmanager.impl.service.RegistrationServiceImpl;
 import com.alacriti.bloodbankmanager.request.RegistrationRequest;
 import com.alacriti.bloodbankmanager.service.RegistrationService;
