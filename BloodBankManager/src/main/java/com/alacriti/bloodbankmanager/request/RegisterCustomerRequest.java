@@ -4,27 +4,19 @@ package com.alacriti.bloodbankmanager.request;
  * @author digvijaykumars
  *
  */
-public class RegistrationRequest {
+public class RegisterCustomerRequest {
 
-	private String id;
+	private String customerId;
 	private String firstName;
 	private String lastName;
 	private String email;
-	private int age;
-	private String bloodGroup;
 	private String phoneNo;
-	private String gender;
-	public String getGender() {
-		return gender;
+	
+	public String getCustomerId() {
+		return customerId;
 	}
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
 	}
 	public String getFirstName() {
 		return firstName;
@@ -43,18 +35,6 @@ public class RegistrationRequest {
 	}
 	public void setEmail(String email) {
 		this.email = email;
-	}
-	public int getAge() {
-		return age;
-	}
-	public void setAge(int age) {
-		this.age = age;
-	}
-	public String getBloodGroup() {
-		return bloodGroup;
-	}
-	public void setBloodGroup(String bloodGroup) {
-		this.bloodGroup = bloodGroup;
 	}
 	public String getPhoneNo() {
 		return phoneNo;

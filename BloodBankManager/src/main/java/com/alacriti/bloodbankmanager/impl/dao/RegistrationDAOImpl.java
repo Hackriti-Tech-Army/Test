@@ -12,7 +12,8 @@ import java.sql.SQLException;
 import org.apache.log4j.Logger;
 
 import com.alacriti.bloodbankmanager.dao.RegistrationDAO;
-import com.alacriti.bloodbankmanager.request.RegistrationRequest;
+import com.alacriti.bloodbankmanager.request.RegisterCustomerRequest;
+import com.alacriti.bloodmanager.bo.PartnerBO;
 import com.alacriti.bloodmanager.dao.exception.BloodManagerDAOException;
 
 public class RegistrationDAOImpl extends BaseDAO implements RegistrationDAO {
@@ -20,12 +21,12 @@ public class RegistrationDAOImpl extends BaseDAO implements RegistrationDAO {
 	final static Logger log = Logger.getLogger(RegistrationDAOImpl.class);
 
 	@Override
-	public boolean register(RegistrationRequest request) throws BloodManagerDAOException {
+	public boolean registerCustomer(RegisterCustomerRequest request) throws BloodManagerDAOException {
 		int count = 0;
 		boolean result = false;
 
-		if (log.isInfoEnabled())
-			log.info(" in register() ");
+		if (log.isDebugEnabled())
+			log.debug(" in registerCustomer() ");
 
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
@@ -41,9 +42,6 @@ public class RegistrationDAOImpl extends BaseDAO implements RegistrationDAO {
 			stmt.setString(++i, request.getLastName());
 			stmt.setString(++i, request.getEmail());
 			stmt.setString(++i, request.getPhoneNo());
-			stmt.setInt(++i, request.getAge());
-			stmt.setString(++i, request.getGender());
-			stmt.setString(++i, request.getBloodGroup());
 			// execute the query
 			count = stmt.executeUpdate();
 			if (count > 0)
@@ -71,4 +69,10 @@ public class RegistrationDAOImpl extends BaseDAO implements RegistrationDAO {
 //		request.setBloodGroup("A+");
 //		System.out.println(new RegistrationDAOImpl().register(request));
 //	}
+
+	@Override
+	public boolean registerPartner(PartnerBO partnerBo) throws BloodManagerDAOException {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }
