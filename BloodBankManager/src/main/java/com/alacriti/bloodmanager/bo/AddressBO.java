@@ -8,6 +8,21 @@ private String city;
 private String state;
 private String country;
 private String zipCode;
+private String lattitude;
+private String longitude;
+
+public String getLattitude() {
+	return lattitude;
+}
+public void setLattitude(String lattitude) {
+	this.lattitude = lattitude;
+}
+public String getLongitude() {
+	return longitude;
+}
+public void setLongitude(String longitude) {
+	this.longitude = longitude;
+}
 public String getAdrressLine1() {
 	return adrressLine1;
 }

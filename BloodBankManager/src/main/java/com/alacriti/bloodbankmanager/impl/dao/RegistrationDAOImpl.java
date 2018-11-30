@@ -72,7 +72,40 @@ public class RegistrationDAOImpl extends BaseDAO implements RegistrationDAO {
 
 	@Override
 	public boolean registerPartner(PartnerBO partnerBo) throws BloodManagerDAOException {
-		// TODO Auto-generated method stub
-		return false;
+		int count = 0;
+		boolean result = false;
+
+		if (log.isDebugEnabled())
+			log.debug(" in registerCustomer() ");
+
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+		Connection conn=null;
+		String query = "insert into  warehouse_info_tbl(f_name,l_name,email,phone_no,age,gender,blood_group)"
+				+ "values(?,?,?,?,?,?,?)";
+		try {
+			conn=getConnection();
+			if(conn!=null){
+			stmt =conn.prepareStatement(query);
+			int i = 0;
+			stmt.setString(++i, partnerBo.getWarehouseType());
+			stmt.setLong(++i, partnerBo.getAddressId());
+			stmt.setString(++i, partnerBo.getTotalArea());
+			stmt.setString(++i, partnerBo.getAvailableArea());
+			// execute the query
+			count = stmt.executeUpdate();
+			if (count > 0)
+				result = true;
+		}
+		} catch (SQLException e) {
+			log.error("Some exception occured during register the user " + e.getMessage());
+			throw new BloodManagerDAOException("Some exception occured during register the user");
+		}
+		finally{
+			close(rs);
+			close(stmt);
+			close(conn);
+		}
+		return result;
 	}
 }

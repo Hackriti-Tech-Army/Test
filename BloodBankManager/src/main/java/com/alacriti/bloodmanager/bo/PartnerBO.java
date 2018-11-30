@@ -2,18 +2,22 @@ package com.alacriti.bloodmanager.bo;
 
 public class PartnerBO {
 	
-private long partnerId;
+private long warehouseId;
 private String name;
 private String email;
 private String phoneNo;
 private String storageType;
 private AddressBO address;
+private String warehouseType;
+private String totalArea;
+private String availableArea;
+private long addressId;
 
-public long getPartnerId() {
-	return partnerId;
+public long getWarehouseId() {
+	return warehouseId;
 }
-public void setPartnerId(long partnerId) {
-	this.partnerId = partnerId;
+public void setWarehouseId(long warehouseId) {
+	this.warehouseId = warehouseId;
 }
 public String getName() {
 	return name;
@@ -44,6 +48,30 @@ public AddressBO getAddress() {
 }
 public void setAddress(AddressBO address) {
 	this.address = address;
+}
+public String getWarehouseType() {
+	return warehouseType;
+}
+public void setWarehouseType(String warehouseType) {
+	this.warehouseType = warehouseType;
+}
+public String getTotalArea() {
+	return totalArea;
+}
+public void setTotalArea(String totalArea) {
+	this.totalArea = totalArea;
+}
+public String getAvailableArea() {
+	return availableArea;
+}
+public void setAvailableArea(String availableArea) {
+	this.availableArea = availableArea;
+}
+public long getAddressId() {
+	return addressId;
+}
+public void setAddressId(long addressId) {
+	this.addressId = addressId;
 }
 
 }
