@@ -1,19 +1,62 @@
 package com.alacriti.bloodbankmanager.request;
 
 public class RegisterPartnerRequest {
+	//Personal Details
+	private String customerId;
+	private String firstName;
+	private String lastName;
+	private String custEmail;
+	private String custPhoneNo;
+	private String password;
+	private String loginIp;
+
+	//Wasrehouse Details
 	private String partnerId;
 	private String name;
 	private String email;
 	private String phoneNo;
 	private String storageType;
 	
-	private String adrressLine1;
+	private String addressLine1;
 	private String addressLine2;
 	private String addressLine3;
 	private String city;
 	private String state;
 	private String country;
 	private String zipCode;
+	
+	private String warehouseType;
+	private String totalArea;
+	private String availableArea;
+	private String lattitude;
+	private String longitude;
+	
+	
+	public String getLattitude() {
+		return lattitude;
+	}
+	public void setLattitude(String lattitude) {
+		this.lattitude = lattitude;
+	}
+	public String getLongitude() {
+		return longitude;
+	}
+	public void setLongitude(String longitude) {
+		this.longitude = longitude;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getLoginIp() {
+		return loginIp;
+	}
+	public void setLoginIp(String loginIp) {
+		this.loginIp = loginIp;
+	}
+	
 	public String getPartnerId() {
 		return partnerId;
 	}
@@ -44,11 +87,12 @@ public class RegisterPartnerRequest {
 	public void setStorageType(String storageType) {
 		this.storageType = storageType;
 	}
-	public String getAdrressLine1() {
-		return adrressLine1;
+	
+	public String getAddressLine1() {
+		return addressLine1;
 	}
-	public void setAdrressLine1(String adrressLine1) {
-		this.adrressLine1 = adrressLine1;
+	public void setAddressLine1(String addressLine1) {
+		this.addressLine1 = addressLine1;
 	}
 	public String getAddressLine2() {
 		return addressLine2;
@@ -85,6 +129,54 @@ public class RegisterPartnerRequest {
 	}
 	public void setZipCode(String zipCode) {
 		this.zipCode = zipCode;
+	}
+	public String getCustomerId() {
+		return customerId;
+	}
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public String getCustEmail() {
+		return custEmail;
+	}
+	public void setCustEmail(String custEmail) {
+		this.custEmail = custEmail;
+	}
+	public String getCustPhoneNo() {
+		return custPhoneNo;
+	}
+	public void setCustPhoneNo(String custPhoneNo) {
+		this.custPhoneNo = custPhoneNo;
+	}
+	public String getWarehouseType() {
+		return warehouseType;
+	}
+	public void setWarehouseType(String warehouseType) {
+		this.warehouseType = warehouseType;
+	}
+	public String getTotalArea() {
+		return totalArea;
+	}
+	public void setTotalArea(String totalArea) {
+		this.totalArea = totalArea;
+	}
+	public String getAvailableArea() {
+		return availableArea;
+	}
+	public void setAvailableArea(String availableArea) {
+		this.availableArea = availableArea;
 	}
 	
 	

@@ -1,6 +1,6 @@
 package com.alacriti.bloodmanager.bo;
 
-public class PartnerBO {
+public class WarehouseBO {
 	
 private long warehouseId;
 private String name;
@@ -8,7 +8,7 @@ private String email;
 private String phoneNo;
 private String storageType;
 private AddressBO address;
-private String warehouseType;
+private int warehouseType;
 private String totalArea;
 private String availableArea;
 private long addressId;
@@ -49,10 +49,11 @@ public AddressBO getAddress() {
 public void setAddress(AddressBO address) {
 	this.address = address;
 }
-public String getWarehouseType() {
+
+public int getWarehouseType() {
 	return warehouseType;
 }
-public void setWarehouseType(String warehouseType) {
+public void setWarehouseType(int warehouseType) {
 	this.warehouseType = warehouseType;
 }
 public String getTotalArea() {
